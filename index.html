@@ -1,22 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Cart-Marmeto</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <!-- REPLACE THIS WITH YOUR PROJECT NAME. EXAMPLE - Category tabs -->
-    <title>Coding Assesment L2 boilerplate</title>
+  <body>
+    <div class="content-wrapper">
+      <!-- Header Section -->
+      <header class="header">
+        <div class="logo">
+          <img
+            src="https://s3-alpha-sig.figma.com/img/2727/769b/a74736d502746301ed573ed8940fc322?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=WoJ-L8z8Vqc1wv3QnE-Zp9RACKOc2UCCUn0PXCVYioMw-WfWAlmIGwFGEpeIhSxny5C3zwoxXruIpIDSgD7hO6FESEhaMWe4RFp9-kgQ9GsEzyRcbEykRKZoe9rMNXbcdcIQ~Pj1NibAOQMGR1kjR3iWjT6syboozPaj4lpaIuNJfFmI1WUvmiGuMU~LzvG0KM7eWMcGv9Ra8i8RAeRrATP4GZj-yKREeYGgzOZfv-fVqZv8TZT85IndLF1QLuwMc2XS7a8a5coH6fqy~C0z1EbVbF7t7fJ0GKL0sMPozRKnHEmUhrQlQRulCwJqj0m7wfua3PnQJt6nzePiHrOcNQ__"
+            alt="Marmeto Logo"
+            class="logo-img"
+          />
+          <span>Marmeto</span>
+        </div>
 
-</head>
+        <nav class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
 
-<body>
-    <!-- Your code goes here -->
-    <div class="container">
-        <a href="https://github.com/mmdmrishabh/Coding-assessment-l2-Boilerplate-code/blob/main/Readme.md" target="_blank">Read how to work with boilerplate</a>
+        <div class="icons">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </header>
+
+      <!-- Cart Page Title -->
+      <section class="cart-title">
+        <div class="background"></div>
+
+        <div class="content">
+          <div class="logo-container">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/2727/769b/a74736d502746301ed573ed8940fc322?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=WoJ-L8z8Vqc1wv3QnE-Zp9RACKOc2UCCUn0PXCVYioMw-WfWAlmIGwFGEpeIhSxny5C3zwoxXruIpIDSgD7hO6FESEhaMWe4RFp9-kgQ9GsEzyRcbEykRKZoe9rMNXbcdcIQ~Pj1NibAOQMGR1kjR3iWjT6syboozPaj4lpaIuNJfFmI1WUvmiGuMU~LzvG0KM7eWMcGv9Ra8i8RAeRrATP4GZj-yKREeYGgzOZfv-fVqZv8TZT85IndLF1QLuwMc2XS7a8a5coH6fqy~C0z1EbVbF7t7fJ0GKL0sMPozRKnHEmUhrQlQRulCwJqj0m7wfua3PnQJt6nzePiHrOcNQ__"
+              alt="Logo"
+              class="logo"
+            />
+          </div>
+          <h1>Cart</h1>
+          <p>Home > Cart</p>
+        </div>
+      </section>
+
+      <!-- Cart Section -->
+      <main class="cart-container">
+        <!-- Cart Items -->
+        <section class="cart-items">
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cart-items-list">
+              <!-- Items will be dynamically added here -->
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Cart Totals -->
+        <section class="cart-totals">
+          <h2>Cart Totals</h2>
+          <div class="totals">
+            <p>Subtotal <span id="subtotal">₹0.00</span></p>
+            <p>Total <span id="total">₹0.00</span></p>
+          </div>
+          <button class="checkout-btn">Check Out</button>
+        </section>
+      </main>
     </div>
-    <!-- Happy coding 😊 -->
-    <script src="./script.js"></script>
-</body>
 
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-item">
+        <i class="fa-solid fa-trophy"></i>
+        <div class="footer-text">
+          <span>High Quality</span>
+          <p>crafted from top materials</p>
+        </div>
+      </div>
+      <div class="footer-item">
+        <i class="fa-solid fa-shield-alt"></i>
+        <div class="footer-text">
+          <span>Warranty Protection</span>
+          <p>Over 2 years</p>
+        </div>
+      </div>
+      <div class="footer-item">
+        <i class="fa-solid fa-truck"></i>
+        <div class="footer-text">
+          <span>Free Shipping</span>
+          <p>Order over $150</p>
+        </div>
+      </div>
+      <div class="footer-item">
+        <i class="fa-solid fa-headset"></i>
+        <div class="footer-text">
+          <span>24/7 Support</span>
+          <p>Dedicated support</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="modal hidden">
+      <div class="modal-content">
+        <p>Are you sure you want to remove this item from the cart?</p>
+        <button id="confirm-remove-btn" class="confirm-btn">Yes, Remove</button>
+        <button id="cancel-remove-btn" class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
